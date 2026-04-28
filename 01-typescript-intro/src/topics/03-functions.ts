@@ -28,6 +28,30 @@ const result3: string = addNumbersArrowString(5, 10);
 // console.log({ result, result2, result3 });
 // console.log({ multiplyResult });
 
+interface Employee {
+    name: string;
+    sales: number;
+    showCurrentSales: () => void;
+}
+
+const addSales = (employee: Employee, amount: number) => {
+    employee.sales += amount;
+}
+
+const benja: Employee = {
+    name: 'Benjamin Correa',
+    sales: 13,
+    showCurrentSales() {
+        console.log(`Ventas ${this.sales}`);
+    }
+}
+
+
+addSales(benja, 10);
+addSales(benja, 27);
+
+
+benja.showCurrentSales();
 
 
 
