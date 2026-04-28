@@ -1,8 +1,3 @@
-/*
-    ===== Código de TypeScript =====
-    SuperHero
-*/
-
 interface Address {
     street: string;
     country: string;
