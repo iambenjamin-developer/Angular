@@ -10,21 +10,39 @@ export class Person {
     // }
 
     constructor(
-        public name: string,
+        public firstName: string,
+        public lastName: string,
         private address: string = 'No address',
     ) { }
 }
 
-export class Hero extends Person {
+// export class Hero extends Person {
 
+//     constructor(
+//         public alterEgo: string,
+//         public age: number,
+//         public realName: string,
+//     ){
+//         super(realName, 'New York');
+//     }
+// }
+
+
+export class Hero {
+
+    // public person: Person;
     constructor(
         public alterEgo: string,
         public age: number,
         public realName: string,
-    ){
-        super(realName, 'New York');
+        public person: Person,
+    ) {
+        // this.person = new Person(realName);
     }
 }
-
-const ironman = new Hero('Ironman', 45, 'Tony Stark');
+const person = new Person('Bruce','Lee', 'China');
+const ironman = new Hero('Ironman', 45, 'Tony Stark', person);
 console.log(ironman);
+
+
+console.log(person);
